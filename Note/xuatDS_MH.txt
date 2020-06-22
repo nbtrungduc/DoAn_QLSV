@@ -1,0 +1,34 @@
+/*LISTCOL newListCol = ListColMonHoc();
+	draw_Table(15, newListCol);*/
+	
+
+	if (DSMH != NULL)
+	{
+		MONHOC* ArrMH = new MONHOC[soLuong_MH];
+		int n = 0;
+		chuyenCaythanhMang_MH(DSMH, ArrMH, n);
+		sapXepTen_MH(ArrMH, n);
+		/*int STT = 0;
+		int x = xTable, y = yTable+3;
+		for (int i = 0; i < n; i++)
+		{
+			gotoxy(x + round(newListCol.infoCol[0]->widthCol/2.0), y + i * 2);
+			cout << ++STT;
+			gotoxy(x + round(newListCol.infoCol[1]->widthCol / 2.0)+ArrMH[i].MAMH.length()/2, y + i * 2);
+			cout << ArrMH[i].MAMH;
+			gotoxy(x + round(newListCol.infoCol[2]->widthCol / 2.0), y + i * 2);
+			cout << ArrMH[i].TENMH;
+			gotoxy(x +newListCol.infoCol[2]->widthCol +  + round(newListCol.infoCol[3]->widthCol*1.5), y + i * 2);
+			cout << ArrMH[i].STCLT;
+			gotoxy(x + newListCol.infoCol[2]->widthCol + round(newListCol.infoCol[4]->widthCol*2.5)+1, y + i * 2);
+			cout << ArrMH[i].STCTH;
+		}*/
+
+		xuatDSTheoTrang_MH(ArrMH, n);
+
+		//deleteListCol(newListCol);
+		delete[] ArrMH;
+	}
+	else {
+		return;
+	}
